@@ -1,0 +1,205 @@
+    .loader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: url('img/3.gif') 50% 50% no-repeat #fff;
+        opacity: 1;
+    }
+    
+    .plusminus {
+        border: 2px solid #00aeff !important;
+        color: #00aeff !important;
+        border-radius: 50% !important;
+        font-weight: bold !important;
+        font-size: 50px !important;
+        background: rgb(255 0 0 / 0%) !important;
+        padding-bottom: -30px;
+        width: 80px !important;
+        height: 80px !important;
+        line-height: 45px !important;
+    }
+    
+    .plusminus:hover {
+        color: white !important;
+        background: #00aeff !important;
+    }
+    
+    .plusminus:focus {
+        outline: none !important;
+    }
+    
+    .wrapper {
+        width: 100%;
+        max-width: 63rem;
+        margin: .75rem auto;
+        margin-top: 100px;
+    }
+    
+    h1 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    
+    .plans {
+        font-weight: bold;
+        font-size: 48px;
+        margin-bottom: 2rem;
+    }
+    
+    .flex {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .leftdiv {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    
+    .tip {
+        width: 40%;
+        font-size: 16px;
+    }
+    
+    .info {
+        max-width: 80%;
+        position: fixed;
+    }
+    
+    .info h1 {
+        text-align: left;
+    }
+    
+    .coverage {
+        margin-bottom: 25px;
+    }
+    
+    .rightdiv {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        background-color: #fff;
+    }
+    
+    .card {
+        display: flex;
+        flex-direction: column;
+        padding-top: 15px;
+        justify-content: space-between;
+    }
+    
+    .top-card {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: -15px;
+        padding: 15px;
+    }
+    
+    .bottom-card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    }
+    
+    .continue {
+        color: #fff;
+        margin: 0;
+        padding: .75rem 2rem;
+        background-color: #ff700a;
+        border: 2px solid #ff700a;
+        border-radius: 0;
+        transition: all .1s;
+        outline: none;
+        white-space: normal;
+    }
+    
+    .con {
+        color: white;
+    }
+    
+    .dropbtn {
+        background-color: transparent;
+        border: none;
+    }
+    
+    @media (max-width:968px) {
+        .flex {
+            flex-direction: column;
+            margin-right: 0;
+            margin-left: 0;
+        }
+        .price {
+            font-size: 24px !important;
+        }
+        .term {
+            padding-left: 2px;
+        }
+        .card {
+            width: 100%;
+            justify-content: center;
+        }
+        .rightdiv {
+            width: 100%;
+        }
+        .bottom-card {
+            justify-content: space-around;
+        }
+        .info {
+            width: auto;
+            position: initial;
+            text-align: center;
+            max-width: 100%;
+            margin-top: -75px;
+        }
+        .tip {
+            width: 100%;
+        }
+        .info h1 {
+            text-align: center;
+        }
+    }
+    
+    @media (max-width: 568px) {
+        .plans {
+            font-size: 30px;
+            text-align: center;
+        }
+        .leftdiv {
+            width: 100%;
+            margin-bottom: 20px;
+            padding-right: 0;
+            align-items: center;
+        }
+        .rightdiv {
+            width: 100%;
+            margin-right: 0;
+            margin-left: 0;
+            padding: 0;
+        }
+        .info {
+            text-align: center;
+            margin-top: -5px;
+        }
+        h1:first-child {
+            margin-bottom: 25px;
+        }
+        .cov {
+            display: none;
+        }
+        .card {
+            width: 100%;
+            justify-content: center;
+        }
+        .bottom-card {
+            justify-content: space-between;
+        }
+        .info {
+            margin-top: -75px;
+        }
+    }

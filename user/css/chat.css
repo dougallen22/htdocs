@@ -1,0 +1,16 @@
+.chat_message_area
+{
+	position: relative;
+	width: 100%;
+	height: auto;
+	background-color: #FFF;
+    border: 1px solid #CCC;
+    border-radius: 3px;
+}
+.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-draggable.ui-resizable{
+    width: 325px !important;
+    z-index: 10000 !important;
+}
+button.ui-dialog-titlebar-close {
+    padding-top: 0px !important;
+}

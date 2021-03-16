@@ -1,0 +1,36 @@
+.card-outer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-outer .card {
+    padding: 1%;
+    flex: 1;
+    box-shadow: 2px 2px 4px #000000;
+    background: white;
+    margin-right: 0.5%;
+    margin-left: 0.5%;
+    margin-bottom: 1%;
+}
+
+.card-outer .card table {
+    width: 100%;
+}
+
+.card-outer .card table td,
+th {
+    text-align: center;
+}
+
+.card-outer .card table button {
+    width: 50%;
+    height: 27px;
+    background: #286090;
+    border-color: #286090;
+    outline-color: #286090;
+}
+
+.card-outer .card table button a {
+    color: white;
+}

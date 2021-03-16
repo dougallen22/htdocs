@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 54 62.41" style="enable-background:new 0 0 54 62.41;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#E9EAEB;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill:none;stroke:#2A5082;stroke-width:2;stroke-miterlimit:10;}
+	.st3{fill:#A3D4FF;stroke:#2A5082;stroke-width:2;stroke-miterlimit:10;}
+</style>
+<g>
+	<circle class="st0" cx="27" cy="27" r="27"/>
+	<path class="st1" d="M44,20c0-7.36-7.39-15-16.5-15C18.39,5,11,12.64,11,20v11c0,0,1.58,1.04,4,2c0.01,5.79,3.1,10.75,8.08,13.7
+		c0.08,0.05,0.18,0.1,0.27,0.14c2.65,1.55,5.91,1.54,8.55-0.02c0.06-0.03,0.09-0.07,0.14-0.1c2.45-1.46,4.42-3.51,5.79-5.91
+		C38.33,40.93,38.74,41,39,41c3.31,0,5-4,5-4V20z"/>
+	<path class="st2" d="M44,33V20.33C44,12.97,36.61,5,27.5,5S11,12.97,11,20.33V31"/>
+	<line class="st2" x1="19" y1="43" x2="19" y2="50"/>
+	<line class="st2" x1="36" y1="43" x2="36" y2="50"/>
+	
+		<rect x="27.93" y="51.17" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -27.9325 40.565)" class="st2" width="14.14" height="5.66"/>
+	
+		<rect x="17.17" y="46.93" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -32.3259 29.9584)" class="st2" width="5.66" height="14.14"/>
+	<path class="st3" d="M10.31,35H11V25h-0.69C8.1,25,6,27.13,6,29.34v1.39C6,32.94,8.1,35,10.31,35z"/>
+	<path class="st3" d="M44.73,35H44V25h0.69c2.37,0,4.31,1.94,4.31,4.31v1.42C49,33.08,47.08,35,44.73,35z"/>
+	<path class="st2" d="M40,29v3.63c0,5.78-2.99,11.14-7.96,14.1c-0.06,0.03-0.09,0.07-0.14,0.1c-2.64,1.56-5.9,1.57-8.55,0.02
+		c-0.08-0.05-0.18-0.09-0.27-0.14C18.09,43.74,15,38.37,15,32.56V25"/>
+	<path class="st2" d="M21,13c0,7,13.94,16,21,16"/>
+	<path class="st2" d="M15,25c0.91-3,4.95-7,8-7"/>
+	<path class="st2" d="M28,41h6h4.25c2.27,0,4.31-1.38,5.15-3.49L44,36v-2"/>
+	<path class="st3" d="M29,43h-3c-1.1,0-2-0.9-2-2v-1c0-1.1,0.9-2,2-2h3c1.1,0,2,0.9,2,2v1C31,42.1,30.1,43,29,43z"/>
+</g>
+</svg>
