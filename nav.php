@@ -40,7 +40,7 @@
                        <a href="tel:123-456-7890"><img src="images/operator-primary-bubble.svg" alt="operator"></a>
                        <a href="tel:123-456-7890p123"><img src="images/message-primary-bubble.svg" alt="message"></a>
                        <a href="tel:123-456-7890p123"><img src="images/phone-primary-bubble-phone.svg" alt="phone"></a>
-                       <?php if ($_SESSION['ruser']) { ?>
+                       <?php if (@$_SESSION['ruser']) { ?>
 
                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 
