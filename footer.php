@@ -15,7 +15,8 @@
                   <a href="tel:123-456-7890p123">Live Chat</a>
               </div>
 
-              <div><a href="tel:123-456-7890p123"><img src="images/phone-primary-bubble.svg" alt="chat"></a>&nbsp;&nbsp;
+              <div><a href="tel:123-456-7890p123"><img src="images/phone-primary-bubble-phone.svg"
+                          alt="chat"></a>&nbsp;&nbsp;
                   <a href="tel:123-456-7890p123">Call non-commissioned agent</a>
               </div>
 

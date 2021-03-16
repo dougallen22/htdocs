@@ -28,13 +28,12 @@
    <header>
        <div class="container-nav">
            <nav>
-
                <ul>
                    <li>
-                       <div class="logo"><a href="index.php"><span class="protect">Protect</span>
-                               <span>Mutual</span></a>
-                       </div>
+                       <a href="index.php"> <img src="images/svg/logo.svg" alt="logo" style: width="209px"
+                               height="41px"></a>
                    </li>
+
 
                    <li>
                        <a href="tel:123-456-7890"><img src="images/operator-primary-bubble.svg" alt="operator"></a>
