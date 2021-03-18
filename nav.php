@@ -12,6 +12,7 @@
     $check_user = mysqli_num_rows($run_user);
     $row = mysqli_fetch_array($run_user);
     $nme = @$_SESSION['ruser']['fname'] . ' ' . @$_SESSION['ruser']['sname'];
+
     if ($row['profile_pic'] != '') {
         $filename = getcwd() . "/user/dist/img/" . $row['profile_pic'];
         if (!file_exists($filename)) {
@@ -22,8 +23,10 @@
     } else {
         $img = 'user/dist/img/admin_dummy.png';
     }
-
     ?>
+
+
+
 
    <header>
        <div class="container-nav">
@@ -44,8 +47,7 @@
                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 
                            <img class="uimg" src="<?php echo $img; ?>">
-                           <span
-                               class="hidden-xs"><?php echo @$_SESSION['ruser']['fname'] . ' ' . @$_SESSION['ruser']['sname']; ?></span>
+                           <span class="hidden-xs"><?php echo @$_SESSION['ruser']['fname'] . ' ' . @$_SESSION['ruser']['sname']; ?></span>
 
                        </a>
 
