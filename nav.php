@@ -15,12 +15,12 @@
     if ($row['profile_pic'] != '') {
         $filename = getcwd() . "/user/dist/img/" . $row['profile_pic'];
         if (!file_exists($filename)) {
-            $img = '/user/dist/img/admin_dummy.png';
+            $img = 'user/dist/img/admin_dummy.png';
         } else {
-            $img = '/user/dist/img/' . $row['profile_pic'];
+            $img = 'user/dist/img/' . $row['profile_pic'];
         }
     } else {
-        $img = '/user/dist/img/admin_dummy.png';
+        $img = 'user/dist/img/admin_dummy.png';
     }
 
     ?>
@@ -49,7 +49,7 @@
 
                        </a>
 
-                       <ul class="dropdown-menu" style="left:940px;right:0;width:30%;">
+                       <ul class="dropdown-menu" style="left:940px;right:0;width:30%; top: 64px">
                            <!-- User image -->
                            <li class="user-header" style="flex-direction:column;text-align:center; align-items:center;">
                                <img class="uimg" src="<?php echo $img; ?>"

@@ -1,23 +1,15 @@
- <?php
-
-  session_start();
-  ob_start();
-  include('check_cookie.php');
-  include('includes/functions.php');
-  check_session();
-  ?>
-
- <!DOCTYPE html>
+<!DOCTYPE html>
  <html>
 
  <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
      <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
      <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
      <link rel="stylesheet" href="../css/dash.css">
-     <link rel="stylesheet" href="..css/style.css">
+     <link rel="stylesheet" href="css/style.css">
 
      <title>Protect Mutual</title>
 
@@ -25,7 +17,12 @@
 
  <body>
 
-     <?php include('nav.php'); ?><br><br>
+     <?php include('../nav.php');
+        ob_start();
+        include('check_cookie.php');
+        check_session();
+
+      ?><br><br>
 
      <div class="container">
          <div class="wrapper">
@@ -85,7 +82,7 @@
               if (!file_exists($filnam) || $result['company_logo'] == '') {
                 echo '<img src="../admin/images/company_dummy.png" width="90" height="60">';
               } else {
-                echo '<img src="/admin/images/' . $result['company_logo'] . '" width="90" height="60">';
+                echo '<img src="../admin/images/' . $result['company_logo'] . '" width="90" height="60">';
               }
               ?>
                      </div>
@@ -302,7 +299,14 @@
      }
 
 
-
+$(document).ready(function() {
+hrf=$(".pull-left a").attr('href');
+$(".pull-left a").attr('href', '../'+hrf);
+hrf=$(".pull-right a").attr('href');
+$(".pull-right a").attr('href', '../'+hrf);
+img=$(".uimg").attr('src');
+$(".uimg").attr('src', '../'+img);
+});
      /*///////////////////////////////////////////////////////////////////////////////////////////////////////
                          Document upload finished
      ///////////////////////////////////////////////////////////////////////////////////////////////////////*/
