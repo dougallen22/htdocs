@@ -25,9 +25,6 @@
     }
     ?>
 
-
-
-
    <header>
        <div class="container-nav">
            <nav>
@@ -36,7 +33,6 @@
                        <a href="index.php"> <img src="images/svg/logo.svg" alt="logo" style: width="209px"
                                height="41px"></a>
                    </li>
-
 
                    <li>
                        <a href="tel:123-456-7890"><img src="images/operator-primary-bubble.svg" alt="operator"></a>
@@ -47,7 +43,8 @@
                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
 
                            <img class="uimg" src="<?php echo $img; ?>">
-                           <span class="hidden-xs"><?php echo @$_SESSION['ruser']['fname'] . ' ' . @$_SESSION['ruser']['sname']; ?></span>
+                           <span
+                               class="hidden-xs"><?php echo @$_SESSION['ruser']['fname'] . ' ' . @$_SESSION['ruser']['sname']; ?></span>
 
                        </a>
 
