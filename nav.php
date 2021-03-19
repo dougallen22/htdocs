@@ -16,9 +16,9 @@
     if ($row['profile_pic'] != '') {
         $filename = str_replace("\user", "", getcwd()) . "/user/dist/img/" . $row['profile_pic'];
         if (!file_exists($filename)) {
-            $img = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]".'/protectmutual/user/dist/img/admin_dummy.png';
+            $img =str_replace(basename($_SERVER['PHP_SELF'])."?".$_SERVER['QUERY_STRING'],"",(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") ) . "://$_SERVER[HTTP_HOST]".'/protectmutual/user/dist/img/admin_dummy.png';
         } else {
-            $img = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]".'/protectmutual/user/dist/img/' . $row['profile_pic'];
+            $img = str_replace(basename($_SERVER['PHP_SELF'])."?".$_SERVER['QUERY_STRING'],"",(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") ) . "://$_SERVER[HTTP_HOST]".'/protectmutual/user/dist/img/' . $row['profile_pic'];
         }
     } else {
         $img = 'user/dist/img/admin_dummy.png';
