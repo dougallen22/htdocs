@@ -304,8 +304,8 @@ hrf=$(".pull-left a").attr('href');
 $(".pull-left a").attr('href', '../'+hrf);
 hrf=$(".pull-right a").attr('href');
 $(".pull-right a").attr('href', '../'+hrf);
-img=$(".uimg").attr('src');
-$(".uimg").attr('src', '../'+img);
+/*img=$(".uimg").attr('src');
+$(".uimg").attr('src', '../'+img);*/
 });
      /*///////////////////////////////////////////////////////////////////////////////////////////////////////
                          Document upload finished
