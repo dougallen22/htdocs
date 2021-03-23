@@ -179,7 +179,11 @@
                     <div class="alert alert-info" role="alert" id="others" style="display: none;"></div>
 
 
+<<<<<<< HEAD
                     <?php
+=======
+     <?php include('../footer.php'); ?>
+>>>>>>> 92d1aa73eb853bb1f827b9f5a41e4a6bd4093390
 
                     if (isset($_POST['submit'])) {
                         $id = $_GET['data'];
@@ -299,6 +303,7 @@
     }
 
 
+<<<<<<< HEAD
     $(document).ready(function() {
         hrf = $(".pull-left a").attr('href');
         $(".pull-left a").attr('href', '../' + hrf);
@@ -311,6 +316,20 @@
                         Document upload finished
     ///////////////////////////////////////////////////////////////////////////////////////////////////////*/
     </script>
+=======
+$(document).ready(function() {
+hrf=$(".pull-left a").attr('href');
+$(".pull-left a").attr('href', '../'+hrf);
+hrf=$(".pull-right a").attr('href');
+$(".pull-right a").attr('href', '../'+hrf);
+/*img=$(".uimg").attr('src');
+$(".uimg").attr('src', '../'+img);*/
+});
+     /*///////////////////////////////////////////////////////////////////////////////////////////////////////
+                         Document upload finished
+     ///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+     </script>
+>>>>>>> 92d1aa73eb853bb1f827b9f5a41e4a6bd4093390
 
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
