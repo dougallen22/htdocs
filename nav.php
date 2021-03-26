@@ -32,7 +32,7 @@
            <nav>
                <ul>
                    <li>
-                       <a href="index.php"> <img src="images/svg/logo.svg" alt="logo" style: width="209px"
+                       <a href="index.php"> <img src="images/svg/logo.svg" alt="logo" class="logo style: width=" 209px"
                                height="41px"></a>
                    </li>
 

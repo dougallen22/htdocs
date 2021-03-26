@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
-    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
-    <link rel="stylesheet" href="../css/dash.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <title>Protect Mutual</title>
 
@@ -25,7 +22,7 @@
     ?><br><br>
 
     <div class="container">
-        <div class="wrapper">
+        <div class="dashboard">
             <h2 style="text-align: center">Your Insurance Dashboard</h2><br><br>
 
             <div class="tabs">
@@ -36,7 +33,7 @@
                 <div><button class="tablink" onclick="openChoice(event,'upload')">Upload Documents</button></div>
                 <div><button class="tablink" onclick="openChoice(event,'billing')">Billing</button></div>
                 <div><button class="tablink" onclick="openChoice(event,'wills')">Wills & Trusts</button></div>
-            </div><br>
+            </div>
 
 
             <?php
@@ -65,7 +62,6 @@
             <div id="quotes" class="choice active">
                 <h4>You selected...</h4><br>
                 <div class="plan">
-
                     <div>
                         <p>Coverage</p><br>
                         <h2>$<?php echo number_format($coverage); ?></h2>
@@ -91,12 +87,11 @@
                         <p>Monthly</p><br>
                         <h2>$<?php echo $price; ?></h2><br>
                     </div>
-
-                </div><br>
+                </div><br><br>
 
                 <div>
                     <h2 style="color: #f35b12; font-weight: bold;"><i class="fa fa-forward"></i>FASTTRACK</h2>
-                    <p><b>skip the wait.</b> if you call now, we can expedite your review.</p>
+                    <p><b>Skip the wait.</b> If you call now, we can expedite your review.</p>
                     <p><b>FastTrack your review:</b></p>
                     <h3 style="padding:0; margin: 0;"><b>855:289:6450</b></h3>
                 </div>
@@ -118,7 +113,8 @@
                     <h2>Secure Messages</h2>
 
                     <form class="form-detail" method="post" action="" enctype="multipart/form-data">
-                        <p style="text-align:center;">Feel free to contact admin if you have any questions. Admin will
+                        <p style="text-align:center;">Feel free to contact admin if you have any questions. Admin
+                            will
                             respond shortly.</p><br>
 
                         <div>
@@ -153,8 +149,6 @@
                 <div id="upload" class="choice" style="display:none">
                     <h2 style="text-align: center">Upload Documents</h2><br>
 
-
-
                     <form action="" method="POST" role="form" enctype="multipart/form-data">
 
                         <div onclick="trigger2();" id="display2">
@@ -169,7 +163,8 @@
 
                         <p style="color: red; display:none; text-align: center; height: 100%;" id="p2">Only images,
                             word, excle or PDF files are accepted</p>
-                        <p style="color: red; display:none; text-align: center; height: 100%;" id="pp2">Please Select a
+                        <p style="color: red; display:none; text-align: center; height: 100%;" id="pp2">Please
+                            Select a
                             File</p>
 
                         <input type="submit" class="btn btn-primary" name="submit" value="SUBMIT"
@@ -219,12 +214,13 @@
                     <h2>Wills & Trusts</h2>
                     <p>Wills & Trusts</p>
                 </div>
+
+
+
             </div>
 
 
         </div>
-
-
     </div>
 
     <?php include('../footer.php'); ?>

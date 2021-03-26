@@ -142,6 +142,31 @@ body {
   --secondary-color: #ff700a;
 }
 
+/*GLOBAL STYLES*/
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 20px;
+}
+h4 {
+  text-align: center;
+  font-size: 20px;
+}
+
+p {
+  line-height: 1.5em;
+}
+
 /*NAVAGATION STYLES*/
 
 .container-nav {
@@ -149,7 +174,7 @@ body {
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
-  padding-top: 10px;
+  padding-top: 1rem;
 }
 header ul {
   display: flex;
@@ -159,7 +184,6 @@ header ul {
   margin-left: auto;
   max-width: 90em;
   padding-right: 30px;
-  padding-top: 5px;
 }
 
 .chat-nav {
@@ -167,7 +191,7 @@ header ul {
   height: 40px;
 }
 
-li:last-child {
+nav li:last-child {
   display: none;
 }
 
@@ -191,18 +215,18 @@ a:link {
 
 @media (max-width: 768px) {
   .container-nav {
-    padding-top: 0px;
+    padding-top: 5px;
   }
   .logo {
-    margin-left: -30px;
-    font-size: 22px;
+    margin-left: -25px;
   }
-  li:nth-child(2) {
+  nav li:nth-child(2) {
     display: none;
   }
-  li:nth-child(3) {
-    display: block;
-    margin-right: -30px;
+  nav li:nth-child(3) {
+    display: inline-block;
+    margin-right: -20px;
+    padding-top: -120px;
   }
   header ul {
     padding: 0.5rem;
@@ -469,20 +493,6 @@ select {
   padding-left: 1.5rem;
 }
 
-h1 {
-  text-align: center;
-  font-size: 36px;
-}
-
-h4 {
-  text-align: center;
-  font-size: 20px;
-}
-
-h3 {
-  font-size: 20px;
-}
-
 @media (max-width: 768px) {
   .container {
     margin-top: 10px;
@@ -545,6 +555,7 @@ h3 {
 }
 
 /* QUOTE PAGE STYLES */
+
 .wrapper {
   width: 100%;
   max-width: 63rem;
@@ -761,12 +772,6 @@ h3 {
 
 /* APPLICATION PAGE STYLES */
 
-h2 {
-  font-size: 20px;
-}
-p {
-  line-height: 1.5em;
-}
 .tab {
   margin-top: -35px;
 }
@@ -952,5 +957,128 @@ input.invalid {
   .state,
   .zip {
     border-right: none;
+  }
+}
+
+/* DASHBOARD PAGE STYLES */
+
+.dashboard {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 53em;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-bottom: 50px;
+}
+.tabs {
+  display: flex;
+  color: white;
+}
+
+.tablink {
+  background-color: rgb(197, 195, 195);
+  border: none;
+  width: 6rem;
+  height: 5rem;
+  text-align: center;
+  transition: 0.25s ease;
+  border: none;
+  border-radius: 20px 20px 0 0;
+  margin-right: 2px;
+  font-size: 14px;
+}
+
+.plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* CONFIRMATION PAGE STYLES */
+
+.confirmation {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 57em;
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-bottom: 50px;
+}
+.conf-box {
+  padding: 2rem;
+}
+
+.confirmation-plan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(0, 174, 255);
+  padding: 1.5rem;
+  min-height: 10rem;
+}
+.confirmation-plan div {
+  text-align: center;
+}
+
+.next {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 1px solid rgb(0, 174, 255);
+  border-right: 1px solid rgb(0, 174, 255);
+  padding: 1.5rem;
+  min-height: 10rem;
+}
+
+.fasttrack {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(0, 174, 255);
+  padding: 1.5rem;
+  min-height: 10rem;
+}
+
+.next ul {
+  list-style-type: circle;
+  line-height: 1.5rem;
+}
+
+.fasttrack ul {
+  list-style-type: none;
+  line-height: 2rem;
+  font-size: 12px;
+}
+
+@media (max-width: 995px) {
+  .confirmation {
+    padding-right: 0;
+    padding-left: 0;
+    overflow: hidden;
+  }
+
+  .conf-box {
+    padding: 0;
+  }
+  .next,
+  .fasttrack {
+    flex-direction: column;
+  }
+  .next {
+    padding-bottom: 0;
+    font-size: 12px;
+  }
+  .next h2 {
+    font-size: 16px;
+  }
+
+  .next div {
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 450px) {
+  .confirmation h1 {
+    font-size: 20px;
+    margin-bottom: -10px;
   }
 }
