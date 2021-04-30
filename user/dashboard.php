@@ -13,8 +13,7 @@
 </head>
 
 <body>
-
-    <?php include('../nav.php');
+    <?php include('../navigation.php');
     ob_start();
     include('check_cookie.php');
     check_session();
@@ -24,18 +23,6 @@
     <div class="container">
         <div class="dashboard">
             <h2 style="text-align: center">Your Insurance Dashboard</h2><br><br>
-
-            <div class="tabs">
-                <div><button class="tablink" onclick="openChoice(event,'quotes')">Quotes</button></div>
-                <div><button class="tablink" onclick="openChoice(event,'advice')">Advice</button></div>
-                <div><button class="tablink" onclick="openChoice(event,'polices')">My Polices</button></div>
-                <div><button class="tablink" onclick="openChoice(event,'messages')">Secure Messages</button></div>
-                <div><button class="tablink" onclick="openChoice(event,'upload')">Upload Documents</button></div>
-                <div><button class="tablink" onclick="openChoice(event,'billing')">Billing</button></div>
-                <div><button class="tablink" onclick="openChoice(event,'wills')">Wills & Trusts</button></div>
-            </div>
-
-
             <?php
             $email = $_SESSION['ruser']['email'];
             if (isset($_GET['productid']) and !empty($_GET['productid'])) {
@@ -58,169 +45,144 @@
                 $resultt = mysqli_fetch_array($ruu);
             }
             ?>
-
-            <div id="quotes" class="choice active">
-                <h4>You selected...</h4><br>
-                <div class="plan">
-                    <div>
-                        <p>Coverage</p><br>
-                        <h2>$<?php echo number_format($coverage); ?></h2>
-                    </div>
-
-                    <div>
-                        <p>Term</p><br>
-                        <h2>$<?php echo number_format($resultt['year']); ?></h2>
-                    </div>
-
-                    <div>
-                        <?php $filnam = dirname(__DIR__) . '/admin/images/' . $result['company_logo'];
-
-                        if (!file_exists($filnam) || $result['company_logo'] == '') {
-                            echo '<img src="../admin/images/company_dummy.png" width="90" height="60">';
-                        } else {
-                            echo '<img src="../admin/images/' . $result['company_logo'] . '" width="90" height="60">';
-                        }
-                        ?>
-                    </div>
-
-                    <div>
-                        <p>Monthly</p><br>
-                        <h2>$<?php echo $price; ?></h2><br>
-                    </div>
-                </div><br><br>
-
-                <div>
-                    <h2 style="color: #f35b12; font-weight: bold;"><i class="fa fa-forward"></i>FASTTRACK</h2>
-                    <p><b>Skip the wait.</b> If you call now, we can expedite your review.</p>
-                    <p><b>FastTrack your review:</b></p>
-                    <h3 style="padding:0; margin: 0;"><b>855:289:6450</b></h3>
-                </div>
-                <p>If you don't choose FastTrack, we'll call you later today for your review</p>
-            </div>
-
-            <div>
-                <div id="advice" class="choice" style="display:none">
-                    <h2>Advice</h2>
-                    <p>Financial Experts recommend at least 10 times your annual salary in life insurance</p>
-                </div>
-
-                <div id="polices" class="choice" style="display:none">
-                    <h2>My Polices</h2>
-                    <p>Polices</p>
-                </div>
-
-                <div id="messages" class="choice" style="display:none">
-                    <h2>Secure Messages</h2>
-
-                    <form class="form-detail" method="post" action="" enctype="multipart/form-data">
-                        <p style="text-align:center;">Feel free to contact admin if you have any questions. Admin
-                            will
-                            respond shortly.</p><br>
-
-                        <div>
-                            <input type="email" name="email" id="email" class="input-text" placeholder="Your Email"
-                                value="<?php echo $_SESSION['ruser']['email']; ?>" readonly>
+            <div id="quotes" class="confirmation">
+                <div class="conf-box">
+                    <h1>Thanks we received your request...</h1><br><br>
+                    <div class="confirmation-plan">
+                        <div class="cover">
+                            <h4>Coverage</h4><br>
+                            <h2>$<?php echo number_format($coverage); ?></h2>
                         </div>
 
-                        <div>
-                            <input type="text" name="subject" id="subject" class="input-text"
-                                placeholder="Your Subject">
+                        <div class="term">
+                            <h4>Term</h4><br>
+                            <h2>$<?php echo number_format($resultt['year']); ?></h2>
                         </div>
 
-                        <div>
-                            <input type="text" name="phone_no" id="phone_no" class="input-text"
-                                placeholder="Mobile Number" value="<?php echo $_SESSION['ruser']['phone']; ?>" readonly>
-                        </div>
+                        <div class="company">
+                            <h4>Company</h4><br>
+                            <?php $filnam = dirname(__DIR__) . '/admin/images/' . $result['company_logo'];
 
-                        <div>
-                            <input type="text" textarea name="message" id="message" rows="100"
-                                placeholder="Message....." required=""></textarea>
-                        </div>
-
-                        <div>
-                            <input type="submit" name="send_admin" id="send" class="register" value="SEND">
-                        </div>
-
-                    </form>
-
-
-                </div>
-
-                <div id="upload" class="choice" style="display:none">
-                    <h2 style="text-align: center">Upload Documents</h2><br>
-
-                    <form action="" method="POST" role="form" enctype="multipart/form-data">
-
-                        <div onclick="trigger2();" id="display2">
-                            <img src="images/upload.png" id="img2" width="150px"><br><br>
-                            <h1>Select File</h1><br>
-                            <input type="file" name="upload" id="inputimg2" style="display: none"
-                                onchange="displayimg2(this);">
-
-                        </div>
-
-                        <div class="alert alert-info" role="alert" id="others" style="display:none;"></div>
-
-                        <p style="color: red; display:none; text-align: center; height: 100%;" id="p2">Only images,
-                            word, excle or PDF files are accepted</p>
-                        <p style="color: red; display:none; text-align: center; height: 100%;" id="pp2">Please
-                            Select a
-                            File</p>
-
-                        <input type="submit" class="btn btn-primary" name="submit" value="SUBMIT"
-                            onclick="emptycheck();">
-                    </form>
-
-                    <div class="alert alert-info" role="alert" id="others" style="display: none;"></div>
-
-
-                    <?php
-
-                    if (isset($_POST['submit'])) {
-                        $id = $_GET['data'];
-                        $img2 = $_FILES['img2']['name'];
-                        $extension = pathinfo($_FILES["img2"]["name"], PATHINFO_EXTENSION);
-                        $newname = 'Document' . rand() . '.' . $extension;
-                        if (!empty($img2) and ($extension == 'pdf' || $extension == 'docx' || $extension == 'doc' || $extension == 'csv' || $extension == 'xlsx' || $extension == 'png' || $extension == 'jpg' || $extension == 'jpeg')) {
-                            if (!empty($doc)) {
-                                $nstr = $doc . ',' . $newname;
-                                $qry = "UPDATE user_plan SET document='$nstr' where id='$id'";
-                                if (mysqli_query(con(), $qry)) {
-                                    move_uploaded_file($_FILES['img2']['tmp_name'], "document/$newname");
-                                    echo "<script> alert('successfully uploaded')</script>";
-                                }
+                            if (!file_exists($filnam) || $result['company_logo'] == '') {
+                                echo '<img src="../admin/images/company_dummy.png" width="60" height="25">';
                             } else {
-                                $qry = "UPDATE user_plan SET document='$newname' where id='$id'";
-                                if (mysqli_query(con(), $qry)) {
-                                    move_uploaded_file($_FILES['img2']['tmp_name'], "document/$newname");
-                                    echo "<script> alert('Successfully Uploaded')</script>";
-                                }
+                                echo '<img src="../admin/images/' . $result['company_logo'] . '" width="60" height="25">';
                             }
-                        } else {
-                            echo "<script> alert('Please Select a file')</script>";
-                        }
-                    }
+                            ?>
+                        </div>
 
-                    ?>
+                        <div class="monthly">
+                            <h4>Monthly</h4><br>
+                            <h2>$<?php echo $price; ?></h2>
+                        </div>
+                    </div>
 
+                    <div class="next">
+                        <div>
+                            <h3>Life Insurance</h3><br>
+                            <h3>Douglas Allen</h3>
+                        </div>
+                        <div>
+                            <h2>Here's what happens next</h2><br>
+                            <ul>
+                                <li>One of our licensed agents will call you to verify your information.</li>
+                                <li>We will answer any questions you may have.</li>
+                                <li>We help you select an insurance company.</li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="fasttrack">
+                        <h2 style="color: #f35b12; font-weight: bold;"><i class="fa fa-forward"></i>FASTTRACK</h2><br>
+                        <ul>
+                            <li>Skip the wait. If you call now, we can expedite your review.</li>
+                            <li>If you don't choose FastTrack, we'll call you later today for your review</li>
+                        </ul>
+                        <h3>855:289:6450</h3>
+                    </div>
                 </div>
-
-                <div id="billing" class="choice" style="display:none">
-                    <h2>Billing</h2>
-                    <p>Billing</p>
-                </div>
-
-                <div id="wills" class="choice" style="display:none">
-                    <h2>Wills & Trusts</h2>
-                    <p>Wills & Trusts</p>
-                </div>
-
-
-
             </div>
+
+
+
 
 
         </div>
+
+        <div id="upload" class="choice" style="display:none">
+            <h2 style="text-align: center">Upload Documents</h2><br>
+
+            <form action="" method="POST" role="form" enctype="multipart/form-data">
+
+                <div onclick="trigger2();" id="display2">
+                    <img src="images/upload.png" id="img2" width="150px"><br><br>
+                    <h1>Select File</h1><br>
+                    <input type="file" name="upload" id="inputimg2" style="display: none" onchange="displayimg2(this);">
+
+                </div>
+
+                <div class="alert alert-info" role="alert" id="others" style="display:none;"></div>
+
+                <p style="color: red; display:none; text-align: center; height: 100%;" id="p2">Only images,
+                    word, excle or PDF files are accepted</p>
+                <p style="color: red; display:none; text-align: center; height: 100%;" id="pp2">Please
+                    Select a
+                    File</p>
+
+                <input type="submit" class="btn btn-primary" name="submit" value="SUBMIT" onclick="emptycheck();">
+            </form>
+
+            <div class="alert alert-info" role="alert" id="others" style="display: none;"></div>
+
+
+            <?php
+
+            if (isset($_POST['submit'])) {
+                $id = $_GET['data'];
+                $img2 = $_FILES['img2']['name'];
+                $extension = pathinfo($_FILES["img2"]["name"], PATHINFO_EXTENSION);
+                $newname = 'Document' . rand() . '.' . $extension;
+                if (!empty($img2) and ($extension == 'pdf' || $extension == 'docx' || $extension == 'doc' || $extension == 'csv' || $extension == 'xlsx' || $extension == 'png' || $extension == 'jpg' || $extension == 'jpeg')) {
+                    if (!empty($doc)) {
+                        $nstr = $doc . ',' . $newname;
+                        $qry = "UPDATE user_plan SET document='$nstr' where id='$id'";
+                        if (mysqli_query(con(), $qry)) {
+                            move_uploaded_file($_FILES['img2']['tmp_name'], "document/$newname");
+                            echo "<script> alert('successfully uploaded')</script>";
+                        }
+                    } else {
+                        $qry = "UPDATE user_plan SET document='$newname' where id='$id'";
+                        if (mysqli_query(con(), $qry)) {
+                            move_uploaded_file($_FILES['img2']['tmp_name'], "document/$newname");
+                            echo "<script> alert('Successfully Uploaded')</script>";
+                        }
+                    }
+                } else {
+                    echo "<script> alert('Please Select a file')</script>";
+                }
+            }
+
+            ?>
+
+        </div>
+
+        <div id="billing" class="choice" style="display:none">
+            <h2>Billing</h2>
+            <p>Billing</p>
+        </div>
+
+        <div id="wills" class="choice" style="display:none">
+            <h2>Wills & Trusts</h2>
+            <p>Wills & Trusts</p>
+        </div>
+
+
+
+    </div>
+
+
+    </div>
     </div>
 
     <?php include('../footer.php'); ?>
@@ -229,7 +191,7 @@
     <script>
     /*///////////////////////////////////////////////////////////////////////////////////////////////////////
                                   Tabs
-                  ///////////////////////////////////////////////////////////////////////////////////////////////////////*/
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
     function openChoice(evt, choiceName) {
         var i, x, tablinks;

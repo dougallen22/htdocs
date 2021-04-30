@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <?php include('../nav.php');
+    <?php include('../navconfirm.php');
     ob_start();
     include('check_cookie.php');
     check_session();

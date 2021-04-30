@@ -176,10 +176,10 @@ p {
   padding-left: 15px;
   padding-top: 1rem;
 }
+
 header ul {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-right: auto;
   margin-left: auto;
   max-width: 90em;
@@ -191,7 +191,7 @@ header ul {
   height: 40px;
 }
 
-nav li:last-child {
+li.mobile-phone {
   display: none;
 }
 
@@ -213,20 +213,21 @@ a:link {
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 830px) {
   .container-nav {
     padding-top: 5px;
   }
   .logo {
-    margin-left: -25px;
+    margin-left: -5px;
   }
   nav li:nth-child(2) {
     display: none;
   }
   nav li:nth-child(3) {
-    display: inline-block;
+    display: block;
+    float: right;
+    margin-top: -45px;
     margin-right: -20px;
-    padding-top: -120px;
   }
   header ul {
     padding: 0.5rem;
@@ -912,6 +913,7 @@ input.invalid {
 }
 
 /* Make circles that indicate the steps of the form: */
+
 .step {
   height: 25px;
   width: 25px;
@@ -924,11 +926,13 @@ input.invalid {
 }
 
 /* Mark the active step: */
+
 .step.active {
   opacity: 1;
 }
 
 /* Mark the steps that are finished and valid: */
+
 .step.finish {
   background-color: #00aeff;
 }
@@ -965,10 +969,11 @@ input.invalid {
 .dashboard {
   margin-right: auto;
   margin-left: auto;
-  max-width: 53em;
+  max-width: 63em;
   padding-right: 30px;
   padding-left: 30px;
   margin-bottom: 50px;
+  margin-top: -25px;
 }
 .tabs {
   display: flex;
@@ -999,13 +1004,10 @@ input.invalid {
 .confirmation {
   margin-right: auto;
   margin-left: auto;
-  max-width: 57em;
+  max-width: 63em;
   padding-right: 30px;
   padding-left: 30px;
   margin-bottom: 50px;
-}
-.conf-box {
-  padding: 2rem;
 }
 
 .confirmation-plan {
@@ -1014,20 +1016,21 @@ input.invalid {
   align-items: center;
   border: 1px solid rgb(0, 174, 255);
   padding: 1.5rem;
-  min-height: 10rem;
+  min-height: 7rem;
 }
+
 .confirmation-plan div {
   text-align: center;
 }
 
 .next {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   border-left: 1px solid rgb(0, 174, 255);
   border-right: 1px solid rgb(0, 174, 255);
   padding: 1.5rem;
-  min-height: 10rem;
+  min-height: 7rem;
 }
 
 .fasttrack {
@@ -1036,22 +1039,23 @@ input.invalid {
   align-items: center;
   border: 1px solid rgb(0, 174, 255);
   padding: 1.5rem;
-  min-height: 10rem;
+  min-height: 7rem;
 }
 
 .next ul {
   list-style-type: circle;
   line-height: 1.5rem;
+  font-size: 14px;
 }
 
 .fasttrack ul {
   list-style-type: none;
   line-height: 2rem;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 @media (max-width: 995px) {
-  .confirmation {
+  .dashboard {
     padding-right: 0;
     padding-left: 0;
     overflow: hidden;
@@ -1060,14 +1064,17 @@ input.invalid {
   .conf-box {
     padding: 0;
   }
+
   .next,
   .fasttrack {
     flex-direction: column;
   }
+
   .next {
     padding-bottom: 0;
     font-size: 12px;
   }
+
   .next h2 {
     font-size: 16px;
   }
@@ -1076,9 +1083,121 @@ input.invalid {
     margin-bottom: 2rem;
   }
 }
+
 @media (max-width: 450px) {
   .confirmation h1 {
     font-size: 20px;
     margin-bottom: -10px;
   }
+}
+
+/*NAVIGATION DASHBOARD STYLES*/
+
+ul.nav-dash li a {
+  font-size: 14px;
+}
+
+.menu-dash {
+  display: none;
+}
+
+@media (max-width: 1130px) {
+  .menu-dash {
+    display: block;
+    float: right;
+  }
+  .dash {
+    display: none;
+  }
+  .dash {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+  }
+
+  .dash a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+  }
+
+  .dash a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .dash a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+}
+
+/*NEW CONFIRMATION STYLES*/
+
+.menu {
+  display: none;
+}
+
+ul li a {
+  color: black;
+  font-weight: 700;
+}
+
+@media (max-width: 830px) {
+  .menu {
+    display: block;
+    float: right;
+  }
+
+  .mobile {
+    background-color: #333;
+    position: relative;
+  }
+
+  .mobile a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+  }
+
+  .mobile a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .mobile a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  header ul {
+    display: block;
+  }
+
+  .container-nav {
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+
+/*ABOUT PAGE*/
+
+.wrap {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 43em;
+  padding-right: 10px;
+  padding-left: 10px;
 }
