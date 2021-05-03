@@ -1101,18 +1101,20 @@ ul.nav-dash li a {
   display: none;
 }
 
-@media (max-width: 1130px) {
+@media (max-width: 1175px) {
   .menu-dash {
     display: block;
     float: right;
   }
+
   .dash {
     display: none;
   }
+
   .dash {
-    overflow: hidden;
     background-color: #333;
     position: relative;
+    width: 100%;
   }
 
   .dash a {
