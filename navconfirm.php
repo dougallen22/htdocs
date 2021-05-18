@@ -39,7 +39,7 @@ if ($row['profile_pic'] != '') {
                 </li>
 
                 <li id="mobileMenu" class="mobile">
-                    <a href="protectmutual.com/user/dashboard">Dashboard</a>
+                    <a href="dashboard">Dashboard</a>
                     <a href="dashboard">Messages</a>
                     <a href="tel:123-456-7890p123"><img src="images/phone-primary-bubble-phone.svg" alt="phone"></a>
 
