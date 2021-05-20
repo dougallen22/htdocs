@@ -4,6 +4,7 @@ if (!isset($_SESSION)) {
 }
 include("user/includes/functions.php");
 $con = con();
+$proid=$_GET['productid'];
 $id = @$_SESSION['ruser']['id'];
 $sel_user = "select * from user_info where id='$id'";
 
@@ -39,8 +40,8 @@ if ($row['profile_pic'] != '') {
                 </li>
 
                 <li id="mobileMenu" class="mobile">
-                    <a href="dashboard">Dashboard</a>
-                    <a href="dashboard">Messages</a>
+                    <a href="dashboard.php?productid=<?php echo $proid; ?>">Dashboard</a>
+                    <a href="dashboard.php?productid=<?php echo $proid; ?>">Messages</a>
                     <a href="tel:123-456-7890p123"><img src="images/phone-primary-bubble-phone.svg" alt="phone"></a>
 
                     <?php if (@$_SESSION['ruser']) { ?>

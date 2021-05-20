@@ -21,6 +21,7 @@
     <div class="container">
         <?php
         $email = $_SESSION['ruser']['email'];
+        $nme = @$_SESSION['ruser']['fname'] . ' ' . @$_SESSION['ruser']['sname'];
         if (isset($_GET['productid']) and !empty($_GET['productid'])) {
             $productid = $_GET['productid'];
         } else {
@@ -77,7 +78,7 @@
                 <div class="next">
                     <div>
                         <h3>Life Insurance</h3><br>
-                        <h3>Douglas Allen</h3>
+                        <h3><?php echo $nme; ?></h3>
                     </div>
                     <div>
                         <h2>Here's what happens next</h2><br>
