@@ -41,7 +41,7 @@ if ($row['profile_pic'] != '') {
 
                 <li id="mobileMenu" class="mobile">
                     <a href="dashboard.php?productid=<?php echo $proid; ?>">Dashboard</a>
-                    <a href="dashboard.php?productid=<?php echo $proid; ?>">Messages</a>
+                    <a href="../messages.php">Messages</a>
                     <a href="tel:123-456-7890p123"><img src="images/phone-primary-bubble-phone.svg" alt="phone"></a>
 
                     <?php if (@$_SESSION['ruser']) { ?>
