@@ -36,10 +36,11 @@
                                height="41px"></a>
                    </li>
                    <li id="dashMenu" class="dash">
+                       <a href="../user/dashboard.php">Dashboard</a>
                        <a href="../advice.php">Advice</a>
                        <a href="../my-polices.php">My Polices</a>
                        <a href="../messages.php">Messages</a>
-                       <a href="upload_file.php">Documents</a>
+                       <a href="../documents.php">Documents</a>
                        <a href="../billing.php">Billing</a>
                        <a href="../wills-trusts.php">Wills & Trusts</a>
                        <a href="tel:123-456-7890p123"><img src="images/phone-primary-bubble-phone.svg" alt="phone"></a>

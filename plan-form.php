@@ -11,12 +11,14 @@ include('user/check_cookie.php');
     <?php include('maincss.php'); ?>
     <link rel="stylesheet" href="css/style.css">
     <title>Protect Mutual</title>
-
 </head>
 
 <body>
     <?php include('nav.php'); ?>
-    <div class="container">
+    <div class="loader" style="display:none;text-align:center;">
+        <h1 style="padding-top:30px;"> Building Your Application.....</h1>
+    </div>
+    <div class="container" id="user_p_form">
         <form id="form" method="post" action="submit-form.php">
 
             <!-- ////////////////////////////////////////
@@ -232,6 +234,7 @@ include('user/check_cookie.php');
             // if you have reached the end of the form... :
             if (currentTab >= x.length) {
                 //...the form gets submitted:
+                $(".loader").show();
                 document.getElementById("form").submit();
                 return false;
             }
@@ -277,12 +280,15 @@ include('user/check_cookie.php');
         <?php include('mainjs.php'); ?>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script type="text/javascript">
-            $(document).ready(function () {
-               $("#nextBtn").on('click', function() {
-                   $("html, body").animate({ scrollTop: 0 }, "fast");
-                        return false;
-               });
+        $(document).ready(function() {
+            $("#nextBtn").on('click', function() {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, "fast");
+                return false;
             });
+
+        });
         </script>
     </div>
 

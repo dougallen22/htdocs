@@ -16,7 +16,7 @@ include('user/check_cookie.php');
 
 <body>
 
-    <?php include('nav.php'); ?>
+    <?php include('navigation.php'); ?>
     <div class="container">
         <div class="wrapper">
             <div class="wrap">

@@ -16,40 +16,42 @@ include('user/check_cookie.php');
 
 <body>
 
-    <?php include('nav.php'); ?>
+    <?php include('navigation.php'); ?>
     <div class="container">
         <div class="wrapper">
             <div class="wrap">
-                <h2>Secure Messages</h2>
+                <h1>Secure Messages</h1>
+                <form action="" enctype="multipart/form-data">
 
-                <form class="form-detail" method="post" action="" enctype="multipart/form-data">
-                    <p style="text-align:center;">Feel free to contact admin if you have any questions. Admin
-                        will
-                        respond shortly.</p><br>
-
-                    <div>
-                        <input type="email" name="email" id="email" class="input-text" placeholder="Your Email"
-                            value="<?php echo $_SESSION['ruser']['email']; ?>" readonly>
+                    <div class="message_name">
+                        <div>
+                            <h3>Name</h3>
+                        </div>
+                        <input type="text" id="name" name="name" placeholder="Your name..."
+                            value="<?php echo $_SESSION['ruser']['fname'] . ' ' . @$_SESSION['ruser']['sname']; ?>">
                     </div>
 
-                    <div>
-                        <input type="text" name="subject" id="subject" class="input-text" placeholder="Your Subject">
+                    <div class="message_email">
+                        <div>
+                            <h3>Email</h3>
+                        </div>
+                        <input type="text" id="email" name="email" placeholder="Your email address..."
+                            value="<?php echo $_SESSION['ruser']['email']; ?>">
                     </div>
 
-                    <div>
-                        <input type="text" name="phone_no" id="phone_no" class="input-text" placeholder="Mobile Number"
-                            value="<?php echo $_SESSION['ruser']['phone']; ?>" readonly>
+                    <div class="message_phone">
+                        <div>
+                            <h3>Phone Number</h3>
+                        </div>
+                        <input type="text" id="phone" name="phone" placeholder="Your Phone Number..."
+                            value="<?php echo $_SESSION['ruser']['phone']; ?>">
                     </div>
 
-                    <div>
-                        <input type="text" textarea name="message" id="message" rows="100" placeholder="Message....."
-                            required=""></textarea>
-                    </div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message..."
+                        style="height:200px"></textarea>
 
-                    <div>
-                        <input type="submit" name="send_admin" id="send" class="register" value="SEND">
-                    </div>
-
+                    <input type="submit" value="SUBMIT">
                 </form>
             </div>
         </div>
