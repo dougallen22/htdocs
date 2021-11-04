@@ -4,3 +4,6 @@
 
 
 trying to reach you on Skype Chat 
+
+
+also tried with whats app but can seem to text you?
