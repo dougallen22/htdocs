@@ -7,3 +7,11 @@ trying to reach you on Skype Chat
 
 
 also tried with whats app but can seem to text you?
+
+
+just tried telegram as well
+
+
+Is the above number correct?
+
+Its like you dont have a whats app or telegram account   keeps saying invite Hamza ????
